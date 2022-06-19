@@ -3,5 +3,5 @@ env
 *.pyc
 __pycache__
 *.sqlite3
-.flake8
+
 
