@@ -1,3 +1,12 @@
-from django.db import models # noqa
+from django.db import models
 
-# Create your models here.
+
+class Profile(models.Model):
+    user = models.OneToOneField(
+        to='auth.User',
+        on_delete=models.CASCADE,
+        related_name='profile'
+    )
+
+
+
