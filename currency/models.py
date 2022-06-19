@@ -7,7 +7,10 @@ class Source(models.Model):
         MONOBANK = 2, 'MonoBank'
 
     name = models.CharField(max_length=64, unique=True)
-    code_name = models.PositiveSmallIntegerField(default=None, choices=SourceCodeName, unique=True)
+    code_name = models.PositiveSmallIntegerField(
+        default=None,
+        choices=SourceCodeName.choices,
+        unique=True)
 
     def __str__(self):
         return self.name
